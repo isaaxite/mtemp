@@ -1,0 +1,22 @@
+@mixin box-shadow($style: 1px 1px 10px rgb(180,180,180)){
+	outline: none;
+	box-shadow: $style;
+}
+
+@mixin rotate($deg: 0deg){
+  transform-origin: center;
+  transform: rotate($deg);
+}
+
+@mixin font-face($name, $path, $weight: normal, $style: normal){
+	@font-face {
+    font-family: $name;
+    src: 	url("#{$path}.eot");
+    src:	url('#{$path}.eot?#iefix') format('embedded-opentype'),
+					url("#{$path}.woff") format('woff'),
+			    url("#{$path}.ttf") format('truetype'),
+			    url("#{$path}.svg#svgFontName") format('svg');
+	}
+	font-weight: $weight;
+	font-style: $style;
+}
