@@ -3,8 +3,7 @@
   @include rotate();
   user-select: none;
 }
-@keyframes mymove
-{
+@keyframes mymove{
   from {top:0px;}
-  to {top:200px;}
+  to {top: px2rem(200px); }
 }
